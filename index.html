@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bondsite (เว็บไซต์ครูบอน) - ห้องเรียนดิจิทัล โรงเรียนวัดวังเรือน</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; scroll-behavior: smooth; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); }
+        .hero-gradient { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); }
+        
+        /* ปรับปรุงขนาดรูปภาพให้เหมาะสมบนทุกหน้าจอ */
+        .profile-frame {
+            width: 100%;
+            max-width: 420px; 
+            height: 550px; 
+            overflow: hidden;
+            border-radius: 3rem;
+            margin: 0 auto;
+        }
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-11 h-11 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-atom text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight text-indigo-900 leading-none block">Bondsite</span>
+                        <span class="text-[10px] font-medium text-slate-400 uppercase tracking-widest">Digital Science Space</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-10 text-sm font-semibold uppercase tracking-wider text-slate-600">
+                    <a href="#home" class="hover:text-indigo-600 transition">หน้าแรก</a>
+                    <a href="#systems" class="hover:text-indigo-600 transition">ระบบสอนซ่อมเสริม</a>
+                    <a href="#portfolio" class="hover:text-indigo-600 transition">ผลงาน</a>
+                    <a href="#about" class="hover:text-indigo-600 transition">เกี่ยวกับครู</a>
+                </div>
+                <div class="md:hidden text-slate-600"><i class="fas fa-bars text-2xl"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-gradient pt-44 pb-32 px-6 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 pr-12 mb-16 md:mb-0 text-center md:text-left">
+                <div class="inline-flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full text-xs font-medium mb-8 backdrop-blur-md border border-white/10">
+                    <span class="relative flex h-3 w-3 mr-1">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
+                    </span>
+                    <span>วิทยาศาสตร์และเทคโนโลยี โรงเรียนวัดวังเรือน</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">เปลี่ยนห้องเรียน <br> ด้วย <span class="text-yellow-400">AI & Coding</span></h1>
+                <p class="text-xl opacity-90 mb-12 font-light leading-relaxed max-w-xl mx-auto md:mx-0">
+                    มุ่งเน้นการพัฒนานวัตกรรมการจัดการเรียนรู้เชิงรุก (Active Learning) 
+                    เพื่อยกระดับศักยภาพผู้เรียนสู่สากล
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-5">
+                    <a href="#systems" class="bg-white text-indigo-700 px-10 py-4 rounded-2xl font-bold shadow-2xl hover:bg-yellow-400 hover:text-indigo-900 transition-all duration-300">เริ่มใช้งานระบบ</a>
+                    <a href="#portfolio" class="bg-indigo-400/30 border border-white/30 px-10 py-4 rounded-2xl font-semibold hover:bg-white/10 transition-all">ชมผลงานวิชาการ</a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center relative">
+                <div class="glass-card profile-frame border-white/40 shadow-3xl p-3 relative">
+                    <img src="https://i.postimg.cc/XvFTMrMM/khr-bxn-ch-dkhaw-by-AI.png" alt="นายดำรงฤทธิ์ เอี่ยมทอง" class="profile-img">
+                    <div class="absolute bottom-10 left-6 right-6 bg-white/95 backdrop-blur-2xl p-6 rounded-[2rem] text-slate-900 shadow-2xl border border-white/50 text-center">
+                        <h4 class="font-bold text-xl tracking-tight text-indigo-950">นายดำรงฤทธิ์ เอี่ยมทอง</h4>
+                        <p class="text-indigo-600 text-sm font-semibold mt-1">ครู วิทยฐานะ ชำนาญการ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="systems" class="max-w-7xl mx-auto px-6 py-32 bg-white rounded-t-[5rem] -mt-20 relative z-20">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">ระบบจัดการห้องเรียนอัจฉริยะ</h2>
+            <div class="w-20 h-1.5 bg-indigo-600 mx-auto rounded-full"></div>
+            <p class="text-slate-500 mt-6 text-lg italic">นวัตกรรม Google Apps Script เพื่อความสะดวกของครูและนักเรียน</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+            <a href="https://sites.google.com/view/bondsite/home" target="_blank" class="glass-card p-10 rounded-[3rem] text-center border-slate-100">
+                <div class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center mb-8 mx-auto text-2xl shadow-inner"><i class="fas fa-piggy-bank"></i></div>
+                <h3 class="font-bold text-xl mb-3">ระบบออมทรัพย์</h3>
+                <p class="text-slate-500 text-sm">จัดการข้อมูลการออมเงินนักเรียนแบบดิจิทัล</p>
+            </a>
+            <a href="https://sites.google.com/view/bondsite/home" target="_blank" class="glass-card p-10 rounded-[3rem] text-center border-indigo-100">
+                <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-8 mx-auto text-2xl shadow-inner"><i class="fas fa-star"></i></div>
+                <h3 class="font-bold text-xl mb-3">บันทึกความดี</h3>
+                <p class="text-slate-500 text-sm">สะสมแต้มความดีและคะแนนพฤติกรรมเชิงบวก</p>
+            </a>
+            <a href="https://sites.google.com/view/bondsite/home" target="_blank" class="glass-card p-10 rounded-[3rem] text-center border-slate-100">
+                <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center mb-8 mx-auto text-2xl shadow-inner"><i class="fas fa-book-reader"></i></div>
+                <h3 class="font-bold text-xl mb-3">สุ่มนิทาน AI</h3>
+                <p class="text-slate-500 text-sm">กระตุ้นจินตนาการด้วยการสุ่มเนื้อหาอัจฉริยะ</p>
+            </a>
+            <a href="https://sites.google.com/view/bondsite/home" target="_blank" class="glass-card p-10 rounded-[3rem] bg-indigo-600 text-white border-none shadow-xl shadow-indigo-200 text-center group">
+                <div class="w-16 h-16 bg-white/20 text-white rounded-2xl flex items-center justify-center mb-8 mx-auto text-2xl group-hover:scale-110 transition duration-300"><i class="fas fa-vial"></i></div>
+                <h3 class="font-bold text-xl mb-3">ติว O-NET</h3>
+                <p class="text-indigo-100 text-sm">คลังข้อสอบและวิเคราะห์ผลวิชาวิทยาศาสตร์</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="bg-indigo-950 py-32 px-6 text-white rounded-[5rem] mx-4 shadow-3xl overflow-hidden relative">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-bold mb-4 italic tracking-tight">ผลงานและความสำเร็จ</h2>
+                <p class="text-indigo-300 font-light">รางวัลยกย่องเชิดชูเกียรติและนวัตกรรมการเรียนรู้เชิงประจักษ์</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                <div class="bg-white/5 p-4 rounded-[3.5rem] border border-white/10 backdrop-blur-md shadow-2xl">
+                    <div class="aspect-video bg-black rounded-[2.5rem] overflow-hidden">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/fFvm92896ic" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <h3 class="text-4xl font-bold text-yellow-400 leading-tight">วีดิทัศน์การสอน <br>Active Learning</h3>
+                    <p class="text-lg text-indigo-100 leading-relaxed font-light">
+                        ตัวอย่างการจัดการเรียนรู้บูรณาการบอร์ดเกมและเทคโนโลยี เพื่อยกระดับทักษะการคิดวิเคราะห์ของนักเรียน
+                    </p>
+                    <div class="pt-4">
+                        <div class="bg-white/10 inline-block px-8 py-4 rounded-3xl border border-white/10">
+                            <span class="block text-3xl font-bold text-white tracking-tighter">O-NET Ranking</span>
+                            <span class="text-xs text-indigo-300 uppercase tracking-widest mt-1 block">สูงกว่าระดับประเทศ 3 ปีต่อเนื่อง</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card bg-white/5 p-10 rounded-[3rem] border-white/10">
+                    <div class="w-14 h-14 bg-yellow-400 text-indigo-950 rounded-2xl flex items-center justify-center mb-8 text-xl shadow-lg"><i class="fas fa-medal"></i></div>
+                    <h4 class="font-bold text-xl mb-4 text-yellow-400">Coding Award</h4>
+                    <p class="text-sm text-indigo-100 leading-relaxed font-light italic">รางวัลครูดีเด่น Coding Achievement Awards ลำดับที่ 1 ระดับชาติ (สพฐ.)</p>
+                </div>
+                <div class="glass-card bg-white/5 p-10 rounded-[3rem] border-white/10">
+                    <div class="w-14 h-14 bg-indigo-500 text-white rounded-2xl flex items-center justify-center mb-8 text-xl shadow-lg"><i class="fas fa-chess-pawn"></i></div>
+                    <h4 class="font-bold text-xl mb-4 text-indigo-200">Best Practice</h4>
+                    <p class="text-sm text-indigo-100 leading-relaxed font-light italic">รางวัลผลงานปฏิบัติที่ดีที่สุดในการออกแบบบอร์ดเกมเพื่อการศึกษา (กสศ.)</p>
+                </div>
+                <div class="glass-card bg-white/5 p-10 rounded-[3rem] border-white/10">
+                    <div class="w-14 h-14 bg-emerald-500 text-white rounded-2xl flex items-center justify-center mb-8 text-xl shadow-lg"><i class="fas fa-robot"></i></div>
+                    <h4 class="font-bold text-xl mb-4 text-emerald-300">Robot ASEAN</h4>
+                    <p class="text-sm text-indigo-100 leading-relaxed font-light italic">ครูผู้สอนนักเรียนได้รับรางวัลเหรียญทอง การแข่งขันหุ่นยนต์ระดับอาเซียน 2024-2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-7xl mx-auto px-6 py-32 bg-white rounded-b-[5rem]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-4">
+                <h2 class="text-4xl font-bold text-indigo-900 mb-10 tracking-tight">ประวัติและ <br>ความเชี่ยวชาญ</h2>
+                <div class="space-y-6">
+                    <div class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-inner">
+                        <h5 class="text-indigo-600 font-bold mb-4 uppercase tracking-widest text-xs text-nowrap">ประวัติการศึกษา</h5>
+                        <ul class="space-y-4 text-slate-600 text-sm">
+                            <li class="flex items-start"><i class="fas fa-graduation-cap mt-1 mr-4 text-indigo-400"></i> ปริญญาโท (กศ.ม.) วิทยาศาสตร์ศึกษา ม.นเรศวร</li>
+                            <li class="flex items-start"><i class="fas fa-graduation-cap mt-1 mr-4 text-indigo-400"></i> ปริญญาตรี (วท.บ.) ชีววิทยา ม.นเรศวร</li>
+                        </ul>
+                    </div>
+                    <div class="bg-indigo-900 p-8 rounded-[2.5rem] text-white shadow-2xl shadow-indigo-100">
+                        <h5 class="text-indigo-300 font-bold mb-4 uppercase tracking-widest text-xs text-nowrap">ความเชี่ยวชาญพิเศษ</h5>
+                        <div class="flex flex-wrap gap-2 text-[10px]">
+                            <span class="bg-white/10 px-3 py-1.5 rounded-xl border border-white/10">Coding & Robotics</span>
+                            <span class="bg-white/10 px-3 py-1.5 rounded-xl border border-white/10">Active Learning</span>
+                            <span class="bg-white/10 px-3 py-1.5 rounded-xl border border-white/10">AI for Education</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                    <div class="p-8 bg-indigo-50 rounded-[3rem] border border-indigo-100">
+                        <h4 class="font-bold text-indigo-900 text-xl mb-4">วิทยากรเชี่ยวชาญ</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">วิทยากรหลักสูตรวิทยาการคำนวณ (Coding) และการอบรมปัญญาประดิษฐ์ (AI) สังกัด สสวท. และ สพฐ.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-[3rem] border border-slate-100">
+                        <h4 class="font-bold text-slate-800 text-xl mb-4">นวัตกรรมบอร์ดเกม</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">พัฒนาบอร์ดเกมเพื่อการเรียนรู้เชิงรุก ภายใต้โครงการพื้นที่ต้นแบบ กสศ. โรงเรียนวัดวังเรือน</p>
+                    </div>
+                </div>
+                <div class="bg-indigo-900/5 p-10 rounded-[3rem] border-2 border-dashed border-indigo-100 text-center">
+                    <h4 class="font-bold text-indigo-900 mb-4 tracking-wide text-lg">"มุ่งมั่นพัฒนานวัตกรรมการสอน เพื่อรากฐานอนาคตของเด็กไทย"</h4>
+                    <p class="text-slate-400 text-xs">— นายดำรงฤทธิ์ เอี่ยมทอง (ครูบอน)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 py-20 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-indigo-900 mb-8 tracking-widest uppercase">BONDSITE <span class="text-slate-300 font-light">| 2026</span></h2>
+            <div class="flex justify-center space-x-12 mb-12 text-slate-400">
+                <a href="#" class="hover:text-indigo-600 transition text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:contact@bondsite.com" class="hover:text-indigo-600 transition text-2xl"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="text-slate-400 text-[10px] font-medium tracking-[0.2em] uppercase leading-relaxed">
+                © 2026 นายดำรงฤทธิ์ เอี่ยมทอง (ครูบอน) - โรงเรียนวัดวังเรือน <br>
+                วิทยฐานะ ชำนาญการ | สพป.พิจิตร เขต 2
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
