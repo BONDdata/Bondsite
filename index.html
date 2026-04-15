@@ -7,8 +7,10 @@
     
     <link rel="icon" type="image/png" href="https://i.postimg.cc/W1Pj0W3Z/Bondsite-logo.png">
     <link rel="apple-touch-icon" href="https://i.postimg.cc/W1Pj0W3Z/Bondsite-logo.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Bondsite">
     <meta name="theme-color" content="#4f46e5">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;600&display=swap" rel="stylesheet">
@@ -23,7 +25,6 @@
         .glass-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); }
         .hero-gradient { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); }
         
-        /* ปรับปรุงขนาดรูปภาพให้เหมาะสมบนทุกหน้าจอ */
         .profile-frame {
             width: 100%;
             max-width: 420px; 
@@ -46,8 +47,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center space-x-3">
-                    <div class="w-11 h-11 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
-                        <i class="fas fa-atom text-xl"></i>
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg overflow-hidden border border-slate-100 p-1">
+                        <img src="https://i.postimg.cc/W1Pj0W3Z/Bondsite-logo.png" alt="Bondsite Logo" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <span class="text-xl font-bold tracking-tight text-indigo-900 leading-none block">Bondsite</span>
@@ -106,15 +107,11 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-
-
             <a href="https://facescan-wr.netlify.app/" target="_blank" class="glass-card p-10 rounded-[3rem] text-center border-slate-100">
                 <div class="w-16 h-16 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center mb-8 mx-auto text-2xl shadow-inner"><i class="fas fa-book-reader"></i></div>
                 <h3 class="font-bold text-xl mb-3">ระบบสแกนหน้า</h3>
                 <p class="text-slate-500 text-sm">เรียนรู้ model AI ผ่าน face sensing</p>
             </a>
-
-
 
             <a href="https://sites.google.com/view/bondsite/learning/ระบบออมเงนนกเรยน?authuser=0" target="_blank" class="glass-card p-10 rounded-[3rem] text-center border-slate-100">
                 <div class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center mb-8 mx-auto text-2xl shadow-inner"><i class="fas fa-piggy-bank"></i></div>
@@ -122,24 +119,17 @@
                 <p class="text-slate-500 text-sm">จัดการข้อมูลการออมเงินนักเรียนแบบดิจิทัล</p>
             </a>
 
-
-
             <a href="https://sites.google.com/view/bondsite/learning/ระบบบนทกความด?authuser=0" target="_blank" class="glass-card p-10 rounded-[3rem] text-center border-indigo-100">
                 <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-8 mx-auto text-2xl shadow-inner"><i class="fas fa-star"></i></div>
                 <h3 class="font-bold text-xl mb-3">บันทึกความดี</h3>
                 <p class="text-slate-500 text-sm">สะสมแต้มความดีและคะแนนพฤติกรรมเชิงบวก</p>
             </a>
 
-
-
             <a href="https://sites.google.com/view/krubone/ขอสอบ-ระดบชาต?authuser=0" target="_blank" class="glass-card p-10 rounded-[3rem] bg-indigo-600 text-white border-none shadow-xl shadow-indigo-200 text-center group">
                 <div class="w-16 h-16 bg-white/20 text-white rounded-2xl flex items-center justify-center mb-8 mx-auto text-2xl group-hover:scale-110 transition duration-300"><i class="fas fa-vial"></i></div>
                 <h3 class="font-bold text-xl mb-3">ติว O-NET</h3>
                 <p class="text-indigo-100 text-sm">คลังข้อสอบและวิเคราะห์ผลวิชาวิทยาศาสตร์</p>
             </a>
-
-
-
         </div>
     </section>
 
@@ -159,7 +149,7 @@
                 <div class="space-y-8">
                     <h3 class="text-4xl font-bold text-yellow-400 leading-tight">วีดิทัศน์การสอน <br>Active Learning</h3>
                     <p class="text-lg text-indigo-100 leading-relaxed font-light">
-                        ตัวอย่างการจัดการเรียนรู้บูรณาการบอร์ดเกมและเทคโนโลยี เพื่อยกระดับทักษะการคิดวิเคราะห์ของนักเรียน
+                        ตัวอย่างการจัดการเรียนรู้บูรณาการบอร์ดเกมและเทคโนโลยี เพื่อยระดับทักษะการคิดวิเคราะห์ของนักเรียน
                     </p>
                     <div class="pt-4">
                         <div class="bg-white/10 inline-block px-8 py-4 rounded-3xl border border-white/10">
