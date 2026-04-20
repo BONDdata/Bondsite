@@ -61,8 +61,19 @@
                     <a href="#portfolio" class="hover:text-indigo-600 transition">ผลงาน</a>
                     <a href="#about" class="hover:text-indigo-600 transition">เกี่ยวกับครู</a>
                 </div>
-                <div class="md:hidden text-slate-600"><i class="fas fa-bars text-2xl"></i></div>
+                <!-- ปุ่ม Mobile Menu -->
+                <div class="md:hidden text-slate-600 cursor-pointer" id="menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </div>
             </div>
+        </div>
+
+        <!-- เพิ่มส่วน Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-8 space-y-4 shadow-xl">
+            <a href="#home" class="block text-lg font-semibold text-slate-700 hover:text-indigo-600">หน้าแรก</a>
+            <a href="#systems" class="block text-lg font-semibold text-slate-700 hover:text-indigo-600">ระบบจัดการชั้นเรียน</a>
+            <a href="#portfolio" class="block text-lg font-semibold text-slate-700 hover:text-indigo-600">ผลงาน</a>
+            <a href="#about" class="block text-lg font-semibold text-slate-700 hover:text-indigo-600">เกี่ยวกับครู</a>
         </div>
     </nav>
 
@@ -236,5 +247,23 @@
         </div>
     </footer>
 
+    <!-- สคริปต์ทำงานของปุ่มเมนูบนมือถือ -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        // คลิกปุ่ม 3 ขีด เพื่อเปิด/ปิดเมนู
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // เมื่อคลิกลิงก์ในเมนู ให้ปิดเมนูอัตโนมัติ
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
